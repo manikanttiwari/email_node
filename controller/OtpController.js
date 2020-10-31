@@ -23,13 +23,13 @@ exports.sendOtp = async (req, res, next) => {
             secure: false,
             requireTLS: true,
             auth: {
-                user: "manikant.cool20@gmail.com",
-                pass: "waikgklhkstcuihs"
+                user: "user@gmail.com",
+                pass: // allow your gmail to send email from desktop for which they will give your a password and put the password in here.
             },
         });
 
         let options = {
-            from: 'manikant.cool20@gmail.com',
+            from: 'sender\'s email',
             to: user.email,
             subject: "Testing",
             html: `<b>Your OTP is ${OTP}</b>`,
